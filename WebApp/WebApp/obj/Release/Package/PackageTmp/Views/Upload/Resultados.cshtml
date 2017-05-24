@@ -1,0 +1,15 @@
+﻿@model Dictionary<string,string>
+
+@{    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Resultados</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>[@item.Key] - @item.Value </li>
+    }
+</ul>
+<hr />
+

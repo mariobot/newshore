@@ -1,0 +1,25 @@
+﻿@model IEnumerable<string>
+@{    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Subir Archivos</h2>
+
+<form action="" method="post" enctype="multipart/form-data">
+
+    <label for="file">Nombre del Archivo:</label>
+    <input type="file" name="file" id="file" />
+
+    <input type="submit" />
+</form>
+
+<hr />
+<h3>Archivos en el servidor</h3>
+<ul>
+    @foreach (var file in Model)
+    {
+        var _file = Path.GetFileName(file);
+        <li>@_file</li>
+    }
+</ul> 
+
